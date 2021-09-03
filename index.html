@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<meta http-equiv='X-UA-Compatible' content='ie=edge'>
+		<link href='./styles.css' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css2?family=Righteous&family=Source+Sans+Pro:wght@300;400;600;700&display=swap' rel='stylesheet'>
+		<script src='./handlebars.js'></script>
+		<script src='./entries.js'></script>
+		<script id='templateHB' type='text/x-handlebars-template'>
+			{{#each entries}}
+				<article class='entry {{#if taken}}taken{{/if}}'>
+					<img class='image' src='{{image}}' alt='{{name}}'>
+					<section class='details'>
+						<h2 class='name'>{{this.name}}</h2>
+						<p class='description'>{{this.description}}</p>
+						<div>
+							{{#if purchase_ready }}
+								{{#each links}}
+									<a href='{{this.this.url}}' target='_blank'>
+										<div class='button purchase'>
+											Purchase Here: {{this.this.price}}
+										</div>
+									</a>
+								{{/each}}
+							{{/if}}
+							{{#if fund_raising }}
+								<a href='https://www.amazon.com/Amazon-com-Gift-Card-Envelope-Black/dp/B06WVJBLBQ/' target='_blank'>
+									<div class='button contribute'>
+										Contribute Here
+									</div>
+								</a>
+							{{/if}}
+						</div>
+					</section>
+				</article>
+			{{/each}}
+		</script>
+		<title>BDay List 2021</title>
+	</head>
+
+	<body>
+		<header>
+			<div>
+				<h1 class='branding'>BDay List 2021</h1>
+			</div>
+			<div class='spacer'></div>
+		</header>
+
+		<section class='container'>
+			<div class='filter-nav'>
+				<div>
+					<p><strong>Filter:</strong></p>
+					<form id='filter-form' class='filter-form'>
+						<div class='filters hide-mobile'>
+							<input id='$' type='radio' name='filter' class='filter-button' value='$'>
+							<label for='$'>$</label>
+							<input id='$$' type='radio' name='filter' class='filter-button' value='$$'>
+							<label for='$$'>$$</label>
+							<input id='$$$' type='radio' name='filter' class='filter-button' value='$$$'>
+							<label for='$$$'>$$$</label>
+							<input id='$$$$' type='radio' name='filter' class='filter-button' value='$$$$'>
+							<label for='$$$$'>$$$$</label>
+						</div>
+						<div class='filters hide-mobile'>
+							<input id='pool' type='radio' name='filter' class='filter-button' value='pool'>
+							<label for='pool'>Pool</label>
+							<input id='clothing' type='radio' name='filter' class='filter-button' value='clothing'>
+							<label for='clothing'>Clothing</label>
+							<input id='video-games' type='radio' name='filter' class='filter-button' value='video-games'>
+							<label for='video-games'>Video Games</label>
+							<input id='bike' type='radio' name='filter' class='filter-button' value='bike'>
+							<label for='bike'>Bike</label>
+							<input id='home' type='radio' name='filter' class='filter-button' value='home'>
+							<label for='home'>Home</label>
+							<input id='events' type='radio' name='filter' class='filter-button' value='events'>
+							<label for='events'>Events</label>
+						</div>
+						<div id='mobile-filter-container' class='filters select-wrapper show-mobile'>
+							<select id='filter-select' name='filter'>
+								<option value='' hidden selected disabled>Select</option>
+								<optgroup label='Price'>
+									<option value='$'>$</option>
+									<option value='$$'>$$</option>
+									<option value='$$$'>$$$</option>
+									<option value='$$$$'>$$$$</option>
+								</optgroup>
+								<optgroup label='Category'>
+									<option value='pool'>Pool</option>
+									<option value='clothing'>Clothing</option>
+									<option value='video-games'>Video Games</option>
+									<option value='bike'>Bike</option>
+									<option value='home'>Home</option>
+									<option value='events'>Events</option>
+								</optgroup>
+							</select>
+						</div>
+						<div id='clear-filter' class='cancel'>
+							&#215;
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<article>
+			<section id='information' class='container'>
+				
+			</section>
+		</article>
+
+		<footer>
+			<p></p>
+		</footer>
+		<script src='./scripts.js'></script>
+	</body>
+</html>
