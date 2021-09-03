@@ -59,7 +59,6 @@ function refreshPage(){
     window.location.reload();
 }
 
-window.addEventListener('load', loadCountdown);
 window.addEventListener('load', loadContext);
 document.getElementById('filter-form').children[0].addEventListener('click', updateContextList);
 document.getElementById('filter-form').children[1].addEventListener('click', updateContextList);
