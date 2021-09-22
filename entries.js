@@ -130,7 +130,7 @@ const context = {
 			],
 			purchase_ready: false,
 			fund_raising: true,
-			taken: false
+			taken: true
 		},
 		{
 			name: 'Under Sink Shelf',
