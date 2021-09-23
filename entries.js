@@ -14,7 +14,7 @@ const context = {
 			],
 			purchase_ready: true,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
 		{
 			name: 'Hallway Rug',
