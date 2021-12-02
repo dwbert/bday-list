@@ -3,13 +3,13 @@ const context = {
 		{
 			name: 'Hallway Rug',
 			category: 'home',
-			image: 'https://secure.img1-fg.wfcdn.com/im/54917815/resize-h800-w800%5Ecompr-r85/1046/104627820/Mya+Oriental+Terracotta%2FCamel%2FPale+Blue+Area+Rug.jpg',
-			description: 'Mya Oriental Terracotta | Camel | Pale Blue Area Rug',
+			image: 'https://secure.img1-fg.wfcdn.com/im/19406364/resize-h800-w800%5Ecompr-r85/4026/40266290/Broomhedge+Oriental+Brown%2FRust+Area+Rug.jpg',
+			description: 'Broomhedge Oriental Brown/Rust Area Rug',
 			price_label: '$$$',
 			links: [
 				{
-					price: '$149.99',
-					url: 'https://www.wayfair.com/rugs/pdp/world-menagerie-mya-oriental-terracottacamelpale-blue-area-rug-w005405270.html?piid=1368794221#tdscwe0cak-5'
+					price: '$115.99',
+					url: 'https://www.wayfair.com/rugs/pdp/charlton-home-broomhedge-oriental-brownrust-area-rug-w005759826.html?piid=1480287156'
 				}
 			],
 			purchase_ready: true,
