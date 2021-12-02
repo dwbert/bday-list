@@ -1,22 +1,6 @@
 const context = {
 	entries: [
 		{
-			name: 'Pool Bag',
-			category: 'pool',
-			image: 'https://cdn11.bigcommerce.com/s-quibru7der/images/stencil/1280x1280/products/190/1093/INS_BUF_1__13110.1457734042.jpg?c=2?imbypass=on',
-			description: '3X5 Instroke Leather Buffalo Cue Case',
-			price_label: '$$$$',
-			links: [
-				{
-					price: '$367.20',
-					url: 'https://www.seyberts.com/instroke-buffalo-leather-cue-cases/3x5-instroke-leather-buffalo-cue-case/'
-				}
-			],
-			purchase_ready: true,
-			fund_raising: false,
-			taken: true
-		},
-		{
 			name: 'Hallway Rug',
 			category: 'home',
 			image: 'https://secure.img1-fg.wfcdn.com/im/54917815/resize-h800-w800%5Ecompr-r85/1046/104627820/Mya+Oriental+Terracotta%2FCamel%2FPale+Blue+Area+Rug.jpg',
@@ -49,22 +33,6 @@ const context = {
 			taken: false
 		},
 		{
-			name: 'Nintendo Switch',
-			category: 'video-games',
-			image: 'https://m.media-amazon.com/images/I/71tafO9HSrL._AC_SL1500_.jpg',
-			description: 'Nintendo Switch with Gray Joy‑Con',
-			price_label: '$$$$',
-			links: [
-				{
-					price: '$299.99',
-					url: 'https://www.amazon.com/Amazon-com-Gift-Card-Envelope-Black/dp/B06WVJBLBQ'
-				}
-			],
-			purchase_ready: false,
-			fund_raising: true,
-			taken: false
-		},
-		{
 			name: 'Birkenstocks',
 			category: 'clothing',
 			image: 'https://www.birkenstock.com/dw/image/v2/BDXC_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4d46e7e4/951313/951313.jpg?sw=848&sh=848',
@@ -82,7 +50,23 @@ const context = {
 			],
 			purchase_ready: false,
 			fund_raising: false,
-			taken: true
+			taken: false
+		},
+		{
+			name: 'Nintendo Switch Travel Case',
+			category: 'video-games',
+			image: 'https://target.scene7.com/is/image/Target/GUEST_12fff90e-fbe8-4e3a-a645-9f3b50c24ee0?fmt=pjpeg&wid=1400&qlt=80',
+			description: 'Nintendo Switch Game Traveler Slim Traveler Case',
+			price_label: '$',
+			links: [
+				{
+					price: '$12.99',
+					url: 'https://www.target.com/p/nintendo-switch-game-traveler-slim-traveler-case/-/A-76439793#lnk=sametab',
+				}		
+			],
+			purchase_ready: true,
+			fund_raising: false,
+			taken: false
 		},
 		{
 			name: 'Bridge',
@@ -112,41 +96,9 @@ const context = {
 					url: 'https://www.gamestop.com/video-games/nintendo-switch/products/super-mario-odyssey/10141908.html?condition=New'
 				}
 			],
-			purchase_ready: false,
-			fund_raising: true,
-			taken: false
-		},
-		{
-			name: 'Legend of Zelda: Breath of the Wild',
-			category: 'video-games',
-			image: 'https://media.gamestop.com/i/gamestop/10141904/The-Legend-of-Zelda-Breath-of-the-Wild?$pdp2x$',
-			description: 'Legend of Zelda: Breath of the Wild | Nintendo Switch | Standard | Physical Game',
-			price_label: '$$',
-			links: [
-				{
-					price: '$44.99',
-					url: 'https://www.gamestop.com/video-games/nintendo-switch/products/the-legend-of-zelda-breath-of-the-wild/10141904.html?condition=New'
-				}
-			],
-			purchase_ready: false,
-			fund_raising: true,
-			taken: true
-		},
-		{
-			name: 'Under Sink Shelf',
-			category: 'home',
-			image: 'https://m.media-amazon.com/images/I/81MKwUVW0rL._AC_SL1500_.jpg',
-			description: 'Simple Trending 2-Tier Under Sink Expandable Cabinet Shelf Organizer Rack for Kitchen Bathroom Storage, Silver',
-			price_label: '$',
-			links: [
-				{
-					price: '$22.97',
-					url: 'https://www.amazon.com/dp/B07T5DS4KK'
-				}
-			],
 			purchase_ready: true,
 			fund_raising: false,
-			taken: true
+			taken: false
 		},
 		{
 			name: 'Wrist Watch',
@@ -163,19 +115,6 @@ const context = {
 			purchase_ready: true,
 			fund_raising: false,
 			taken: false
-		},
-		{
-			name: 'Tom Segura Comedy Show',
-			category: 'events',
-			image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.Sr8tSqN3xqXnff68Xb0cfgHaE8%26pid%3DApi&f=1',
-			description: 'I\'m Coming Everywhere - World Tour | Riverside Theater | Milwaukee WI',
-			price_label: '$$$',
-			links: [
-
-			],
-			purchase_ready: false,
-			fund_raising: false,
-			taken: true
 		},
 		{
 			name: 'Purell Dispenser',
