@@ -48,7 +48,7 @@ const context = {
 					url: 'https://www.birkenstock.com/us/arizona-suede-leather/arizona-core-suedeleather-softfootbed-eva-u_90.html?dwvar_arizona-core-suedeleather-softfootbed-eva-u__90_size=260&region=US'
 				}
 			],
-			purchase_ready: false,
+			purchase_ready: true,
 			fund_raising: false,
 			taken: false
 		},
