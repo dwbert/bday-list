@@ -100,7 +100,7 @@ const context = {
 			fund_raising: false,
 			taken: false
 		},
-		{
+		/*{
 			name: 'Wrist Watch',
 			category: 'clothing',
 			image: 'https://www.mvmt.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwc390af57/images/products/L213.1L.331_fr.jpg?sw=1660&sh=1660',
@@ -115,7 +115,7 @@ const context = {
 			purchase_ready: true,
 			fund_raising: false,
 			taken: false
-		},
+		},*/
 		{
 			name: 'Purell Dispenser',
 			category: 'home',
