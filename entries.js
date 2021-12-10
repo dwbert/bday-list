@@ -12,9 +12,9 @@ const context = {
 					url: 'https://www.wayfair.com/rugs/pdp/charlton-home-broomhedge-oriental-brownrust-area-rug-w005759826.html?piid=1480287156'
 				}
 			],
-			purchase_ready: true,
+			purchase_ready: false,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
 		{
 			name: 'Wrist Watch',
@@ -164,9 +164,9 @@ const context = {
 					url: 'https://www.birkenstock.com/us/arizona-suede-leather/arizona-core-suedeleather-softfootbed-eva-u_90.html?dwvar_arizona-core-suedeleather-softfootbed-eva-u__90_size=260&region=US'
 				}
 			],
-			purchase_ready: true,
+			purchase_ready: false,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
 		{
 			name: 'Bicycle Tires',
