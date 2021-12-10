@@ -112,9 +112,9 @@ const context = {
 					url: 'https://www.amazon.com/25oz-Rage-Heavy-Hitter-Break/dp/B00EAIF6SY'
 				}
 			],
-			purchase_ready: true,
-			fund_raising: true,
-			taken: false
+			purchase_ready: false,
+			fund_raising: false,
+			taken: true
 		},
 		{
 			name: 'Super Mario Odyssey',
