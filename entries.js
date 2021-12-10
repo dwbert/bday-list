@@ -100,22 +100,42 @@ const context = {
 			fund_raising: false,
 			taken: false
 		},
-		/*{
+		{
 			name: 'Wrist Watch',
 			category: 'clothing',
-			image: 'https://www.mvmt.com/dw/image/v2/BDKZ_PRD/on/demandware.static/-/Sites-mgi-master/default/dwc390af57/images/products/L213.1L.331_fr.jpg?sw=1660&sh=1660',
-			description: 'Classic 45mm / Classic White Tan',
+			image: 'https://m.media-amazon.com/images/I/81Q-Rf3am2L._AC_UY879_.jpg',
+			description: 'SEIKO 5 Automatic Stainless Steel Watch with White Dial - SNK789',
 			price_label: '$$$',
 			links: [
 				{
-					price: '$98.00',
-					url: 'https://www.mvmt.com/mens-watches/classic/classic-white-tan/L213.1L.331.html'
+					price: '$92.00',
+					url: 'https://www.amazon.com/Seiko-SNK789-Automatic-Stainless-Steel/dp/B0018N0HL0'
+				},
+				{
+					price: '$99.00',
+					url: 'https://www.jomashop.com/seiko-watch-snk789.html'
 				}
 			],
 			purchase_ready: true,
 			fund_raising: false,
 			taken: false
-		},*/
+		},
+		{
+			name: 'Watch Band',
+			category: 'clothing',
+			image: 'https://cdn.shopify.com/s/files/1/0835/8495/products/Caramel_Tan_SS_buckle_040249e6-65c8-41f7-9774-b99f9a83aa31_1024x1024@2x.jpg?v=1623255864',
+			description: 'Weathered Brown Leather Quick Release | 18mm | Stainless Steel Buckle',
+			price_label: '$',
+			links: [
+				{
+					price: '$26.00',
+					url: 'https://www.bartonwatchbands.com/collections/leather-watch-bands/products/weathered-brown-leather?variant=31616731906102'
+				}
+			],
+			purchase_ready: true,
+			fund_raising: false,
+			taken: false
+		},
 		{
 			name: 'Purell Dispenser',
 			category: 'home',
