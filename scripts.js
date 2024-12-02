@@ -1,67 +1,90 @@
-var loadContext = () => {
-	const templateFunction = Handlebars.compile(document.getElementById('templateHB').innerHTML);
-	const compiledHTML = templateFunction(context);
+const compileTemplate = (context) => {
+  const templateFunction = Handlebars.compile(document.getElementById('templateHB').innerHTML);
+  return templateFunction(context);
+};
 
-	document.getElementById('information').innerHTML = compiledHTML;
-}
+const generateFilterInputs = () => {
+  const priceFiltersContainer = document.getElementById('desktop-price-filters');
+  const categoryFiltersContainer = document.getElementById('desktop-category-filters');
+  const mobileFilterSelect = document.getElementById('mobile-filter-select');
 
-var updateContextList = () => {
-	var filterKey, filterInputs = document.getElementsByName('filter'), filterSelect = document.getElementById('filter-select'), newContext = {};
-	
-	newContext.entries = [];
-	
-	for (var i = filterInputs.length - 1; i >= 0; i--) {
-		if (filterInputs[i].checked) {
-			filterKey = filterInputs[i].value;
-		}
-	}
+  const uniquePrices = [...new Set(context.entries.map(entry => entry.price_label))];
+  const uniqueCategories = [...new Set(context.entries.map(entry => entry.category))];
 
-	filterSelect.value = filterKey;
+  uniquePrices.sort().forEach(price => {
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'filter';
+    input.value = price;
+    input.id = `price-filter-${price}`;
+    
+    const label = document.createElement('label');
+    label.htmlFor = input.id;
+    label.textContent = price;
 
-	for (var i = 0; i < context.entries.length; i++) {
-		if (Object.values(context.entries[i]).includes(filterKey)) {
-			newContext.entries.push(context.entries[i])
-		}
-	}
+    priceFiltersContainer.appendChild(input);
+    priceFiltersContainer.appendChild(label);
 
-	const templateFunction = Handlebars.compile(document.getElementById('templateHB').innerHTML);
-	const compiledHTML = templateFunction(newContext);
+    const option = document.createElement('option');
+    option.value = price;
+    option.textContent = price;
+    mobileFilterSelect.querySelector('optgroup[label="Price"]').appendChild(option);
+  });
 
-	document.getElementById('information').innerHTML = compiledHTML;
-}
+  uniqueCategories.sort().forEach(category => {
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = 'filter';
+    input.value = category;
+    input.id = `category-filter-${category.toLowerCase()}`;
+    
+    const label = document.createElement('label');
+    label.htmlFor = input.id;
+    label.textContent = category;
 
-var updateContextSelect = () => {
-	var filterKey, filterInputs = document.getElementsByName('filter'), filterSelect = document.getElementById('filter-select'), newContext = {};
-	
-	newContext.entries = [];
-	
-	filterKey = filterSelect.value;
+    categoryFiltersContainer.appendChild(input);
+    categoryFiltersContainer.appendChild(label);
 
-	for (var i = filterInputs.length - 1; i >= 0; i--) {
-		if (filterKey == filterInputs[i].value) {
-			filterInputs[i].checked = true;
-		}
-	}
+    const option = document.createElement('option');
+    option.value = category;
+    option.textContent = category;
+    mobileFilterSelect.querySelector('optgroup[label="Category"]').appendChild(option);
+  });
+};
 
-	for (var i = 0; i < context.entries.length; i++) {
-		if (Object.values(context.entries[i]).includes(filterKey)) {
-			newContext.entries.push(context.entries[i])
-		}
-	}
+generateFilterInputs();
 
-	const templateFunction = Handlebars.compile(document.getElementById('templateHB').innerHTML);
-	const compiledHTML = templateFunction(newContext);
+const updateContext = (filterKey) => {
+  const newContext = { entries: context.entries.filter(entry => Object.values(entry).includes(filterKey)) };
+  document.getElementById('information').innerHTML = compileTemplate(newContext);
+};
 
-	document.getElementById('information').innerHTML = compiledHTML;
-}
+const loadContext = () => {
+  document.getElementById('information').innerHTML = compileTemplate(context);
+};
 
-function refreshPage(){
-    window.location.reload();
-}
+const updateContextList = () => {
+  const filterInputs = document.getElementsByName('filter');
+  let filterKey = Array.from(filterInputs).find(input => input.checked)?.value;
+  if (filterKey) {
+    document.getElementById('mobile-filter-select').value = filterKey;
+    updateContext(filterKey);
+  }
+};
+
+const updateContextSelect = () => {
+  const filterSelect = document.getElementById('mobile-filter-select');
+  const filterKey = filterSelect.value;
+  const filterInputs = document.getElementsByName('filter');
+  Array.from(filterInputs).forEach(input => input.checked = input.value === filterKey);
+  updateContext(filterKey);
+};
+
+const refreshPage = () => {
+  window.location.reload();
+};
 
 window.addEventListener('load', loadContext);
-document.getElementById('filter-form').children[0].addEventListener('click', updateContextList);
-document.getElementById('filter-form').children[1].addEventListener('click', updateContextList);
-document.getElementById('filter-form').children[2].addEventListener('change', updateContextSelect);
+document.querySelectorAll('#filter-form input[type="radio"]').forEach(input => input.addEventListener('click', updateContextList));
+document.getElementById('mobile-filter-select').addEventListener('change', updateContextSelect);
 document.getElementById('clear-filter').onclick = refreshPage;
-
