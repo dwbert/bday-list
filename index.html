@@ -43,7 +43,7 @@
 	<body>
 		<header>
 			<div>
-				<h1 class='branding'>Drew's Wish List</h1>
+				<h1 class='branding'>Drew's Gift List</h1>
 			</div>
 			<div class='spacer'></div>
 		</header>
@@ -53,47 +53,13 @@
 				<div>
 					<p><strong>Filter:</strong></p>
 					<form id='filter-form' class='filter-form'>
-						<div class='filters hide-mobile'>
-							<input id='$' type='radio' name='filter' class='filter-button' value='$'>
-							<label for='$'>$</label>
-							<input id='$$' type='radio' name='filter' class='filter-button' value='$$'>
-							<label for='$$'>$$</label>
-							<input id='$$$' type='radio' name='filter' class='filter-button' value='$$$'>
-							<label for='$$$'>$$$</label>
-							<input id='$$$$' type='radio' name='filter' class='filter-button' value='$$$$'>
-							<label for='$$$$'>$$$$</label>
-						</div>
-						<div class='filters hide-mobile'>
-							<input id='pool' type='radio' name='filter' class='filter-button' value='pool'>
-							<label for='pool'>Pool</label>
-							<input id='clothing' type='radio' name='filter' class='filter-button' value='clothing'>
-							<label for='clothing'>Clothing</label>
-							<input id='video-games' type='radio' name='filter' class='filter-button' value='video-games'>
-							<label for='video-games'>Video Games</label>
-							<input id='bike' type='radio' name='filter' class='filter-button' value='bike'>
-							<label for='bike'>Bike</label>
-							<input id='home' type='radio' name='filter' class='filter-button' value='home'>
-							<label for='home'>Home</label>
-							<input id='events' type='radio' name='filter' class='filter-button' value='events'>
-							<label for='events'>Events</label>
-						</div>
+						<div id='desktop-price-filters' class='filters hide-mobile'></div>
+						<div id='desktop-category-filters' class='filters hide-mobile'></div>
 						<div id='mobile-filter-container' class='filters select-wrapper show-mobile'>
-							<select id='filter-select' name='filter'>
+							<select id='mobile-filter-select' name='filter'>
 								<option value='' hidden selected disabled>Select</option>
-								<optgroup label='Price'>
-									<option value='$'>$</option>
-									<option value='$$'>$$</option>
-									<option value='$$$'>$$$</option>
-									<option value='$$$$'>$$$$</option>
-								</optgroup>
-								<optgroup label='Category'>
-									<option value='pool'>Pool</option>
-									<option value='clothing'>Clothing</option>
-									<option value='video-games'>Video Games</option>
-									<option value='bike'>Bike</option>
-									<option value='home'>Home</option>
-									<option value='events'>Events</option>
-								</optgroup>
+								<optgroup label='Price'></optgroup>
+								<optgroup label='Category'></optgroup>
 							</select>
 						</div>
 						<div id='clear-filter' class='cancel'>
