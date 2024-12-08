@@ -48,9 +48,9 @@ const context = {
 					url: 'https://www.amazon.com/dp/B0C87H7QKS'
 				}
 			],
-			purchase_ready: true,
-			fund_raising: true,
-			taken: false
+			purchase_ready: false,
+			fund_raising: false,
+			taken: true
 		},
     	{
 			name: 'XBox Game Pass',
