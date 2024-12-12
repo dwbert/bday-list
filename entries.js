@@ -12,9 +12,9 @@ const context = {
 					url: 'https://www.amazon.com/dp/B08HMLKS2N'
 				}
 			],
-			purchase_ready: true,
+			purchase_ready: false,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
     	{
 			name: 'Ultrasonic Cleaning Pod',
@@ -192,9 +192,9 @@ const context = {
 					url: 'https://www.amazon.com/dp/B0D1K1VD4P'
 				}
 			],
-			purchase_ready: true,
+			purchase_ready: false,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
     	{
 			name: 'Shoe Organizer',
