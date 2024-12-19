@@ -30,7 +30,7 @@ const context = {
 			],
 			purchase_ready: true,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
     	{
 			name: 'Vacuum Cleaner',
@@ -66,7 +66,7 @@ const context = {
 			],
 			purchase_ready: true,
 			fund_raising: false,
-			taken: false
+			taken: true
 		},
     	{
 			name: 'StoveGuard',
